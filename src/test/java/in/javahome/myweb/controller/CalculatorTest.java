@@ -9,6 +9,9 @@ import java.util.Properties;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+
+string password= "68af404b513073584c4b6f22b6c63e6b";
+
 public class CalculatorTest extends TestCase {
 	Calculator cal = new Calculator();
 
