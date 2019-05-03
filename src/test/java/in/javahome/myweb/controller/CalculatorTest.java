@@ -9,11 +9,14 @@ import java.util.Properties;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
-//test sensitive data
-String ipAddress = new String("172.16.254.1");
-String password = new String("password");
+
 
 public class CalculatorTest extends TestCase {
+	
+	//test sensitive data
+	String ipAddress = new String("172.16.254.1");
+	String password = new String("password");
+	
 	Calculator cal = new Calculator();
 
 	public void testAdd() {
