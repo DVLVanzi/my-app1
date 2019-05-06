@@ -4,8 +4,10 @@ ADD policy.json /etc/aquasec/policy/policy.json
 ADD firewall.json /etc/aquasec/policy/firewall.json
 CMD ["<ORIGINAL COMMAND>"]
 ENTRYPOINT ["/bin/microenforcer", "<ORIGINAL ENTRYPOINT>"]
+USER root
 RUN groupadd -g 1002 dockeruser && \
     useradd -r -u 1002 -g dockeruser duser
+    /bin/microenforcer aqua-init
 USER duser
 # Take the war and copy to webapps of tomcat
 COPY target/*.war /usr/local/tomcat/webapps/
