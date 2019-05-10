@@ -1,5 +1,5 @@
 FROM tomcat:8
-USER root
+
 RUN groupadd -g 1003 dockeruser && \
     useradd -r -u 1003 -g dockeruser duser1
 USER duser1
